@@ -192,3 +192,157 @@
 
 // const neuteredDogs = dogs.filter((dog) => dog.isNeutered === true);
 // console.log(neuteredDogs);
+
+// USING THE FOLLOWING ARRAY
+// const dogs = [
+//   {
+//     age: 5,
+//     breed: "Labrador Retriever",
+//     name: "Buddy",
+//     birthdate: "2018-03-08",
+//     isNeutered: true,
+//   },
+//   {
+//     age: 2,
+//     breed: "Golden Retriever",
+//     name: "Charlie",
+//     birthdate: "2021-06-01",
+//     isNeutered: false,
+//   },
+//   {
+//     age: 3,
+//     breed: "German Shepherd",
+//     name: "Max",
+//     birthdate: "2020-08-15",
+//     isNeutered: true,
+//   },
+//   {
+//     age: 1,
+//     breed: "Poodle",
+//     name: "Bella",
+//     birthdate: "2022-01-25",
+//     isNeutered: false,
+//   },
+//   {
+//     age: 4,
+//     breed: "Bulldog",
+//     name: "Henry",
+//     birthdate: "2019-05-12",
+//     isNeutered: true,
+//   },
+//   {
+//     age: 6,
+//     breed: "Beagle",
+//     name: "Lucy",
+//     birthdate: "2017-09-22",
+//     isNeutered: true,
+//   },
+//   {
+//     age: 7,
+//     breed: "Yorkshire Terrier",
+//     name: "Molly",
+//     birthdate: "2016-12-31",
+//     isNeutered: false,
+//   },
+//   {
+//     age: 8,
+//     breed: "Chihuahua",
+//     name: "Oscar",
+//     birthdate: "2015-03-08",
+//     isNeutered: true,
+//   },
+//   {
+//     age: 9,
+//     breed: "Dachshund",
+//     name: "Sadie",
+//     birthdate: "2014-06-01",
+//     isNeutered: false,
+//   },
+//   {
+//     age: 10,
+//     breed: "Corgi",
+//     name: "Tessa",
+//     birthdate: "2013-08-15",
+//     isNeutered: true,
+//   },
+// ];
+// // loop over the dogs array and log the name and breed
+
+// dogs.forEach((dog) => {
+//   console.log(`name: ${dog.name}, breed: ${dog.breed}`);
+// });
+
+//Write a JS route that sends a GET request to the root url (assuming const app = express() already exists).
+// app.get("/", (req, res) => {
+//   res.send("<h1>This is the root</h1>");
+// });
+
+// console.log only the profession of each person
+// const peopleArray = [
+//   {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 30,
+//     profession: "Software Engineer",
+//   },
+//   {
+//     firstName: "Jane",
+//     lastName: "Smith",
+//     age: 25,
+//     profession: "Graphic Designer",
+//   },
+//   {
+//     firstName: "Michael",
+//     lastName: "Johnson",
+//     age: 40,
+//     profession: "Data Scientist",
+//   },
+//   {
+//     firstName: "Emily",
+//     lastName: "Williams",
+//     age: 35,
+//     profession: "Marketing Specialist",
+//   },
+//   {
+//     firstName: "Daniel",
+//     lastName: "Brown",
+//     age: 28,
+//     profession: "UX/UI Designer",
+//   },
+//   {
+//     firstName: "Olivia",
+//     lastName: "Davis",
+//     age: 32,
+//     profession: "Financial Analyst",
+//   },
+//   { firstName: "William", lastName: "Jones", age: 45, profession: "Architect" },
+//   { firstName: "Sophia", lastName: "Moore", age: 27, profession: "Teacher" },
+//   {
+//     firstName: "Ethan",
+//     lastName: "Miller",
+//     age: 38,
+//     profession: "Project Manager",
+//   },
+//   {
+//     firstName: "Ava",
+//     lastName: "Wilson",
+//     age: 33,
+//     profession: "Medical Doctor",
+//   },
+// ];
+
+// peopleArray.forEach((person) => {
+//   console.log(person.profession);
+// });
+
+//JS to split a string (str) into individual letters?
+
+// const str = "i am a string";
+// const splitString = str.split("");
+// console.log(splitString);
+
+// What JS would you use to add a variable newElement to the end of the body?
+// const newElement = document.createElement("h3");
+// newElement.innerText = "hiyee";
+// const body = document.querySelector("body");
+// body.append(newElement);
