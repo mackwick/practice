@@ -346,3 +346,29 @@
 // newElement.innerText = "hiyee";
 // const body = document.querySelector("body");
 // body.append(newElement);
+
+//Write JS to bring in an express library and create a variable that returns an express application object.
+// const express = require("express");
+// const app = express();
+
+//Using the following HTML:
+{
+  /* <form>
+<input type="text" name="username" placeholder="username">
+<input type="password" name="password" placeholder="password">
+<input type="submit" value="Create User">
+</form>
+
+console log the username and password */
+}
+
+// const form = document.querySelector("form");
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const formData = new FormData(event.target);
+
+//   const un = formData.get("username");
+//   const pw = formData.get("password");
+
+//   console.log(un, pw);
+// });

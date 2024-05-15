@@ -16,3 +16,6 @@
 	# 	taco: 2.99
 	# }
 #keys need to be in ""
+
+#What is a way to add items to a list in Python?
+#append, extend, insert
