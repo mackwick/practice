@@ -19,3 +19,18 @@
 
 #What is a way to add items to a list in Python?
 #append, extend, insert
+
+#What is a way to remove an item from the front of a list in Python?
+#pop(0), remove("value"), or del(0)
+
+#Write a python function named sum_tothat accepts a single integer, n, and returns the sum of the integers from 1 to n.
+# def sum_to(n):
+#     if n == 0:
+#     	return n
+#     else:
+#         prev_n = sum_to(n-1)
+#         result = prev_n + n
+#         return result
+        
+# print(sum_to(2))
+    

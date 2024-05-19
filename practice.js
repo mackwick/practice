@@ -372,3 +372,29 @@ console log the username and password */
 
 //   console.log(un, pw);
 // });
+
+//What six values are "falsey"?
+//0, null, NaN, undefined, false, ""
+
+//JS to round the variable "a" normally, up, or down
+// Math.round(a);
+// Math.ceil(a);
+// Math.floor(a);
+
+//what function can I use to alter the attributes of any node?
+// const node = document.querySelector("div");
+// node.setAttribute("class", "the-class");
+
+// write code to use the array below to generate <li></li> for each number in the array listed in order (create HTML boilerplate and add an <ul> w/ a id of "first"
+//<ul><li>1</li><li>2</li><li>3</li><li>4</li><li>1</li>5</ul>
+// const arr = [1, 2, 3, 4, 5];
+// const ul = document.getElementById("first");
+// arr.forEach((num) => {
+//   const li = document.createElement("li");
+//   li.innerText = num;
+//   ul.append(li);
+// });
+
+//How would you console log const a = '1' as an integer?
+// const a = "1";
+// console.log(parseInt(a));
