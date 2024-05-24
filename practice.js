@@ -398,3 +398,26 @@ console log the username and password */
 //How would you console log const a = '1' as an integer?
 // const a = "1";
 // console.log(parseInt(a));
+
+// Create an h4 element with the text of Powered by JavaScript. Add that element to the end of the <body> of the document for this HTML:
+// <h1 id="title">Welcome to the DOM</h1>
+// <p>Don't feel <span class="blue">blue</span>, here's what to do.</p>
+// const h4 = document.createElement("h4");
+// h4.innerText = "Powered by JavaScript";
+// const body = document.querySelector("body");
+// body.append(h4);
+
+// Write an object called "aboutMe" with your name, age, and cities you've lived in.
+// const aboutMe = {
+//   name: "Mack",
+//   age: 500,
+//   citiesILivedIn: [
+//     "winston",
+//     "rutherfordton",
+//     "wilmington",
+//     "boone",
+//     "nyc",
+//     "la",
+//     "asheville",
+//   ],
+// };
