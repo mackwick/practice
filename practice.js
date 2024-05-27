@@ -421,3 +421,148 @@ console log the username and password */
 //     "asheville",
 //   ],
 // };
+//Use a for of loop to capitalize on each ninja turtle in this array and print out the result.
+// let turtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
+
+// for (let turtle of turtles) {
+//   console.log(turtle.toUpperCase());
+// }
+
+// const peopleArray = [
+//   {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 30,
+//     profession: "Software Engineer",
+//   },
+//   {
+//     firstName: "Jane",
+//     lastName: "Smith",
+//     age: 25,
+//     profession: "Graphic Designer",
+//   },
+//   {
+//     firstName: "Michael",
+//     lastName: "Johnson",
+//     age: 40,
+//     profession: "Data Scientist",
+//   },
+//   {
+//     firstName: "Emily",
+//     lastName: "Williams",
+//     age: 35,
+//     profession: "Marketing Specialist",
+//   },
+//   {
+//     firstName: "Daniel",
+//     lastName: "Brown",
+//     age: 28,
+//     profession: "UX/UI Designer",
+//   },
+//   {
+//     firstName: "Olivia",
+//     lastName: "Davis",
+//     age: 32,
+//     profession: "Financial Analyst",
+//   },
+//   { firstName: "William", lastName: "Jones", age: 45, profession: "Architect" },
+//   { firstName: "Sophia", lastName: "Moore", age: 27, profession: "Teacher" },
+//   {
+//     firstName: "Ethan",
+//     lastName: "Miller",
+//     age: 38,
+//     profession: "Project Manager",
+//   },
+//   {
+//     firstName: "Ava",
+//     lastName: "Wilson",
+//     age: 33,
+//     profession: "Medical Doctor",
+//   },
+// ];
+
+//Use every to determine whether every person in the array is over the age of 30
+
+// console.log(peopleArray.every((el) => el.age > 30));
+
+// const peopleArray = [
+//   {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 30,
+//     profession: "Software Engineer",
+//   },
+//   {
+//     firstName: "Jane",
+//     lastName: "Smith",
+//     age: 25,
+//     profession: "Graphic Designer",
+//   },
+//   {
+//     firstName: "Michael",
+//     lastName: "Johnson",
+//     age: 40,
+//     profession: "Data Scientist",
+//   },
+//   {
+//     firstName: "Emily",
+//     lastName: "Williams",
+//     age: 35,
+//     profession: "Marketing Specialist",
+//   },
+//   {
+//     firstName: "Daniel",
+//     lastName: "Brown",
+//     age: 28,
+//     profession: "UX/UI Designer",
+//   },
+//   {
+//     firstName: "Olivia",
+//     lastName: "Davis",
+//     age: 32,
+//     profession: "Financial Analyst",
+//   },
+//   { firstName: "William", lastName: "Jones", age: 45, profession: "Architect" },
+//   { firstName: "Sophia", lastName: "Moore", age: 27, profession: "Teacher" },
+//   {
+//     firstName: "Ethan",
+//     lastName: "Miller",
+//     age: 38,
+//     profession: "Project Manager",
+//   },
+//   {
+//     firstName: "Ava",
+//     lastName: "Wilson",
+//     age: 33,
+//     profession: "Medical Doctor",
+//   },
+// ];
+
+//use some to determine whether just 1 person has the first name Olivia
+
+// console.log(peopleArray.some((el) => el.firstName === "Olivia"));
+
+// //Create <div id="practice"></div> and do the following using jQuery:
+// // save the div.practice in a variables
+// const $practice = $("#practice");
+// // want you to change its background color to black
+// $practice.css({ "background-color": "black", color: "white" });
+// // change it's fond color to white
+// // create a ul and append it to div.practice
+// const $ul = $("<ul>");
+// $practice.append($ul);
+// // then create an li with the number 1 and append to ul
+// const $li1 = $("<li>").text("1");
+// $ul.append($li1);
+// // then create an li with the number 5 and append to ul
+// const $li5 = $("<li>").text("5");
+// $ul.append($li5);
+// // then create an li with the number 2 and put it in the correct spot
+// const $li2 = $("<li>").text("2");
+// $li1.after($li2);
+// // then create an li with the number 4 put in the correct spot
+// const $li4 = $("<li>").text("4");
+// $li5.before($li4);
+// // then create an li with the number 3 and put in the correct spot
+// const $li3 = $("<li>").text("3");
+// $li4.before($li3);

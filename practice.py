@@ -34,3 +34,10 @@
         
 # print(sum_to(2))
     
+#What are the first few steps of creating a new python/django package?
+# python -m venv venv
+# source ./venv/bin/activate
+# pip install django
+# django startproject <name>
+# cd <name>
+# django-admin startapp <section name>
