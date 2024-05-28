@@ -566,3 +566,28 @@ console log the username and password */
 // // then create an li with the number 3 and put in the correct spot
 // const $li3 = $("<li>").text("3");
 // $li4.before($li3);
+
+function timeConversion(s) {
+  const newArr = [];
+  const splitS = s.split(":"); // [07, 05, 45PM]
+  const dayNight = splitS[2].split(""); // [4, 5, p, m]
+  const AorP = dayNight[dayNight.length - 2]; // a or p
+  const end = splitS[1] + ":" + dayNight[0] + dayNight[1];
+
+  if (splitS[0] < 12 && AorP === "A") {
+    newArr.push(splitS[0] + ":");
+    newArr.push(end);
+  } else if (splitS[0] < 12 && AorP === "P") {
+    newArr.push(parseInt(splitS[0]) + 12 + ":");
+    newArr.push(end);
+  } else if (splitS[0] === "12" && AorP === "P") {
+    newArr.push("12:");
+    newArr.push(end);
+  } else if (splitS[0] === "12" && AorP === "A") {
+    newArr.push("00:");
+    newArr.push(end);
+  }
+  console.log(newArr);
+}
+
+timeConversion("12:40:22AM");
