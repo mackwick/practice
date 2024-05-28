@@ -567,27 +567,140 @@ console log the username and password */
 // const $li3 = $("<li>").text("3");
 // $li4.before($li3);
 
-function timeConversion(s) {
-  const newArr = [];
-  const splitS = s.split(":"); // [07, 05, 45PM]
-  const dayNight = splitS[2].split(""); // [4, 5, p, m]
-  const AorP = dayNight[dayNight.length - 2]; // a or p
-  const end = splitS[1] + ":" + dayNight[0] + dayNight[1];
+// function timeConversion(s) {
+//   const newArr = [];
+//   const splitS = s.split(":"); // [07, 05, 45PM]
+//   const dayNight = splitS[2].split(""); // [4, 5, p, m]
+//   const AorP = dayNight[dayNight.length - 2]; // a or p
+//   const end = splitS[1] + ":" + dayNight[0] + dayNight[1];
 
-  if (splitS[0] < 12 && AorP === "A") {
-    newArr.push(splitS[0] + ":");
-    newArr.push(end);
-  } else if (splitS[0] < 12 && AorP === "P") {
-    newArr.push(parseInt(splitS[0]) + 12 + ":");
-    newArr.push(end);
-  } else if (splitS[0] === "12" && AorP === "P") {
-    newArr.push("12:");
-    newArr.push(end);
-  } else if (splitS[0] === "12" && AorP === "A") {
-    newArr.push("00:");
-    newArr.push(end);
-  }
-  console.log(newArr);
-}
+//   if (splitS[0] < 12 && AorP === "A") {
+//     newArr.push(splitS[0] + ":");
+//     newArr.push(end);
+//   } else if (splitS[0] < 12 && AorP === "P") {
+//     newArr.push(parseInt(splitS[0]) + 12 + ":");
+//     newArr.push(end);
+//   } else if (splitS[0] === "12" && AorP === "P") {
+//     newArr.push("12:");
+//     newArr.push(end);
+//   } else if (splitS[0] === "12" && AorP === "A") {
+//     newArr.push("00:");
+//     newArr.push(end);
+//   }
+//   console.log(newArr);
+// }
 
-timeConversion("12:40:22AM");
+// timeConversion("12:40:22AM");
+
+// // save the div#practice in a variables
+// const $div = $("#practice");
+// // want you to change its background color to black and it's fond color to white
+// $div.css({ "background-color": "black", color: "white" });
+// // create a ul and append it to div.practice
+// const $ul = $("<ul>");
+// $div.append($ul);
+// // then create an li with the number 1 and append to ul
+// const $li1 = $("<li>").text("1");
+// $ul.append($li1);
+// // then create an li with the number 5 and append to ul
+// const $li5 = $("<li>").text("5");
+// $ul.append($li5);
+// // then create an li with the number 2 and put it in the correct spot
+// const $li2 = $("<li>").text("2");
+// $li1.after($li2);
+// // then create an li with the number 4 put in the correct spot
+// const $li4 = $("<li>").text("4");
+// $li5.before($li4);
+// // then create an li with the number 3 and put in the correct spot
+// const $li3 = $("<li>").text("3");
+// $li2.after($li3);
+
+// for the following array of objects:
+const students = [
+  {
+    id: 1,
+    name: "Alice Smith",
+    email: "alice.smith@example.com",
+    major: "Computer Science",
+  },
+  {
+    id: 2,
+    name: "Bob Jones",
+    email: "bob.jones@example.com",
+    major: "Mathematics",
+  },
+  {
+    id: 3,
+    name: "Carol Williams",
+    email: "carol.williams@example.com",
+    major: "English",
+  },
+  {
+    id: 4,
+    name: "Dave Miller",
+    email: "dave.miller@example.com",
+    major: "History",
+  },
+  {
+    id: 5,
+    name: "Emily Brown",
+    email: "emily.brown@example.com",
+    major: "Biology",
+  },
+  {
+    id: 6,
+    name: "Frank Garcia",
+    email: "frank.garcia@example.com",
+    major: "Chemistry",
+  },
+  {
+    id: 7,
+    name: "Grace Anderson",
+    email: "grace.anderson@example.com",
+    major: "Physics",
+  },
+  {
+    id: 8,
+    name: "Henry Davis",
+    email: "henry.davis@example.com",
+    major: "Political Science",
+  },
+  {
+    id: 9,
+    name: "Isabella Johnson",
+    email: "isabella.johnson@example.com",
+    major: "Economics",
+  },
+  {
+    id: 10,
+    name: "Jack Wilson",
+    email: "jack.wilson@example.com",
+    major: "Philosophy",
+  },
+];
+
+// write a for of loop that creates and logs variable html, which is an html <div> with <h1>= name; <h2>= major; <h3>=email and uses interpolation to pull the info from the array
+
+// for (let student of students) {
+//   const html = `<div>
+//     <h1>${student.name}</h1>
+//     <h2>${student.major}</h2>
+//     <h2>${student.email}</h2>
+//     </div>`;
+//   console.log(html);
+// }
+
+// Use a while loop to count down the daysUntilTheFinale of your favorite show, starting at 30 days. For each day, log the message "Only ______ more days!" by filling in the value of daysUntilTheFinale in the blank. Stop the countdown once daysUntiltheFinale reaches 0, then log the message "It's finally here!".
+// Your first message should be "Only 30 more days!" and it should log down to "Only 1 more days!".
+
+// let daysUntilTheFinale = 30;
+
+// while (daysUntilTheFinale >= 0) {
+//   if (daysUntilTheFinale > 0) {
+//     console.log(`Only ${daysUntilTheFinale} more days!`);
+//     daysUntilTheFinale = daysUntilTheFinale - 1;
+//   } else {
+//     console.log("It's finally here!");
+//     daysUntilTheFinale = daysUntilTheFinale - 1;
+//   }
+// }
