@@ -41,3 +41,25 @@
 # django startproject <name>
 # cd <name>
 # django-admin startapp <section name>
+    
+
+# In python, how would you print "Mack" using this dictionary:
+# myself = {"name": "Mack", "age": 35}
+
+# print(myself["name"])
+
+### In Python - create a variable "new_num" where the variable is the input in response to "give me a number: "
+### Write an if statement that first checks if the number is divisible by 5
+### if true, print "div by 5"
+### if not, check if its divisible 3
+### if true, print "div by 3"
+### if false, "not div by 3 or 5"
+
+# new_num = int(input("give me a number: "))
+
+# if (new_num % 5 == 0):
+#     print("div by 5")
+# elif (new_num % 3 == 0):
+#     print("div by 3")
+# else:
+#     print("not div by 3 or 5")

@@ -616,68 +616,68 @@ console log the username and password */
 // $li2.after($li3);
 
 // for the following array of objects:
-const students = [
-  {
-    id: 1,
-    name: "Alice Smith",
-    email: "alice.smith@example.com",
-    major: "Computer Science",
-  },
-  {
-    id: 2,
-    name: "Bob Jones",
-    email: "bob.jones@example.com",
-    major: "Mathematics",
-  },
-  {
-    id: 3,
-    name: "Carol Williams",
-    email: "carol.williams@example.com",
-    major: "English",
-  },
-  {
-    id: 4,
-    name: "Dave Miller",
-    email: "dave.miller@example.com",
-    major: "History",
-  },
-  {
-    id: 5,
-    name: "Emily Brown",
-    email: "emily.brown@example.com",
-    major: "Biology",
-  },
-  {
-    id: 6,
-    name: "Frank Garcia",
-    email: "frank.garcia@example.com",
-    major: "Chemistry",
-  },
-  {
-    id: 7,
-    name: "Grace Anderson",
-    email: "grace.anderson@example.com",
-    major: "Physics",
-  },
-  {
-    id: 8,
-    name: "Henry Davis",
-    email: "henry.davis@example.com",
-    major: "Political Science",
-  },
-  {
-    id: 9,
-    name: "Isabella Johnson",
-    email: "isabella.johnson@example.com",
-    major: "Economics",
-  },
-  {
-    id: 10,
-    name: "Jack Wilson",
-    email: "jack.wilson@example.com",
-    major: "Philosophy",
-  },
-];
+// const students = [
+//   {
+//     id: 1,
+//     name: "Alice Smith",
+//     email: "alice.smith@example.com",
+//     major: "Computer Science",
+//   },
+//   {
+//     id: 2,
+//     name: "Bob Jones",
+//     email: "bob.jones@example.com",
+//     major: "Mathematics",
+//   },
+//   {
+//     id: 3,
+//     name: "Carol Williams",
+//     email: "carol.williams@example.com",
+//     major: "English",
+//   },
+//   {
+//     id: 4,
+//     name: "Dave Miller",
+//     email: "dave.miller@example.com",
+//     major: "History",
+//   },
+//   {
+//     id: 5,
+//     name: "Emily Brown",
+//     email: "emily.brown@example.com",
+//     major: "Biology",
+//   },
+//   {
+//     id: 6,
+//     name: "Frank Garcia",
+//     email: "frank.garcia@example.com",
+//     major: "Chemistry",
+//   },
+//   {
+//     id: 7,
+//     name: "Grace Anderson",
+//     email: "grace.anderson@example.com",
+//     major: "Physics",
+//   },
+//   {
+//     id: 8,
+//     name: "Henry Davis",
+//     email: "henry.davis@example.com",
+//     major: "Political Science",
+//   },
+//   {
+//     id: 9,
+//     name: "Isabella Johnson",
+//     email: "isabella.johnson@example.com",
+//     major: "Economics",
+//   },
+//   {
+//     id: 10,
+//     name: "Jack Wilson",
+//     email: "jack.wilson@example.com",
+//     major: "Philosophy",
+//   },
+// ];
 
 // write a for of loop that creates and logs variable html, which is an html <div> with <h1>= name; <h2>= major; <h3>=email and uses interpolation to pull the info from the array
 
@@ -704,3 +704,81 @@ const students = [
 //     daysUntilTheFinale = daysUntilTheFinale - 1;
 //   }
 // }
+
+// This is a classic problem that you should get really comfortable solving. If you've solved it before, try to make it more elegant and short.
+// Write a javascript application that logs all numbers from 1 - 100.
+// If a number is divisible by 3 log "Fizz" instead of the number.
+// If a number is divisible by 5 log "Buzz" instead of the number.
+// If a number is divisible by 3 and 5 log "FizzBuzz" instead of the number.
+
+// for (let i = 1; i < 100; i++) {
+//   let fizz = i % 3;
+//   let buzz = i % 5;
+
+//   if (fizz === 0 && buzz === 0) {
+//     console.log("FizzBuzz");
+//   } else if (fizz === 0) {
+//     console.log("Fizz");
+//   } else if (buzz === 0) {
+//     console.log("Buzz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+// const peopleArray = [
+//   {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 30,
+//     profession: "Software Engineer",
+//   },
+//   {
+//     firstName: "Jane",
+//     lastName: "Smith",
+//     age: 25,
+//     profession: "Graphic Designer",
+//   },
+//   {
+//     firstName: "Michael",
+//     lastName: "Johnson",
+//     age: 40,
+//     profession: "Data Scientist",
+//   },
+//   {
+//     firstName: "Emily",
+//     lastName: "Williams",
+//     age: 35,
+//     profession: "Marketing Specialist",
+//   },
+//   {
+//     firstName: "Daniel",
+//     lastName: "Brown",
+//     age: 28,
+//     profession: "UX/UI Designer",
+//   },
+//   {
+//     firstName: "Olivia",
+//     lastName: "Davis",
+//     age: 32,
+//     profession: "Financial Analyst",
+//   },
+//   { firstName: "William", lastName: "Jones", age: 45, profession: "Architect" },
+//   { firstName: "Sophia", lastName: "Moore", age: 27, profession: "Teacher" },
+//   {
+//     firstName: "Ethan",
+//     lastName: "Miller",
+//     age: 38,
+//     profession: "Project Manager",
+//   },
+//   {
+//     firstName: "Ava",
+//     lastName: "Wilson",
+//     age: 33,
+//     profession: "Medical Doctor",
+//   },
+// ];
+
+// //use reduce to concatenate everyone's first name
+
+// console.log(peopleArray.reduce((x, y) => x + y.firstName, ""));
