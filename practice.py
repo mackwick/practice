@@ -63,3 +63,17 @@
 #     print("div by 3")
 # else:
 #     print("not div by 3 or 5")
+
+# Translate JS to Python
+
+# function reverseString(str){
+# return str.split("").reverse().join("")
+# }
+
+# console.log(reverseString("Hello World")) // "dlroW olleH"
+
+# def reverseString(str):
+#     reversed = [*str]
+#     reversed.reverse()
+#     return "".join(reversed)
+# print(reverseString("Hello World"))

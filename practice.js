@@ -782,3 +782,86 @@ console log the username and password */
 // //use reduce to concatenate everyone's first name
 
 // console.log(peopleArray.reduce((x, y) => x + y.firstName, ""));
+
+// for the following array of objects:
+// const students = [
+//   {
+//     id: 1,
+//     name: "Alice Smith",
+//     email: "alice.smith@example.com",
+//     major: "Computer Science",
+//   },
+//   {
+//     id: 2,
+//     name: "Bob Jones",
+//     email: "bob.jones@example.com",
+//     major: "Mathematics",
+//   },
+//   {
+//     id: 3,
+//     name: "Carol Williams",
+//     email: "carol.williams@example.com",
+//     major: "English",
+//   },
+//   {
+//     id: 4,
+//     name: "Dave Miller",
+//     email: "dave.miller@example.com",
+//     major: "History",
+//   },
+//   {
+//     id: 5,
+//     name: "Emily Brown",
+//     email: "emily.brown@example.com",
+//     major: "Biology",
+//   },
+//   {
+//     id: 6,
+//     name: "Frank Garcia",
+//     email: "frank.garcia@example.com",
+//     major: "Chemistry",
+//   },
+//   {
+//     id: 7,
+//     name: "Grace Anderson",
+//     email: "grace.anderson@example.com",
+//     major: "Physics",
+//   },
+//   {
+//     id: 8,
+//     name: "Henry Davis",
+//     email: "henry.davis@example.com",
+//     major: "Political Science",
+//   },
+//   {
+//     id: 9,
+//     name: "Isabella Johnson",
+//     email: "isabella.johnson@example.com",
+//     major: "Economics",
+//   },
+//   {
+//     id: 10,
+//     name: "Jack Wilson",
+//     email: "jack.wilson@example.com",
+//     major: "Philosophy",
+//   },
+// ];
+
+// // write a for of loop that creates a table of information for students majoring in philosophy
+
+// for (let student of students) {
+//   if (student.major === "Philosophy") {
+//     console.table(student);
+//   }
+// }
+
+// // With the following array, remove Eggbert:
+// const whereIsWaldo = [
+//   ["Timmy", "Frank"],
+//   "Eggbert",
+//   ["Lucinda", "Jacc", "Neff", "Snoop"],
+//   ["Petunia", ["Baked Goods", "Waldo"]],
+// ];
+
+// whereIsWaldo.splice(1, 1);
+// console.log(whereIsWaldo);
