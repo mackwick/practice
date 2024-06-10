@@ -77,3 +77,11 @@
 #     reversed.reverse()
 #     return "".join(reversed)
 # print(reverseString("Hello World"))
+
+# Translate JS to Python
+
+# function reverseString(str){
+# return str.split("").reverse().join("")
+# }
+
+# console.log(reverseString("Hello World")) // "dlroW olleH"
