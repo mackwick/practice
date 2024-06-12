@@ -973,3 +973,8 @@ console log the username and password */
 //   <p>bio: ${user.bio}</p>`;
 //   div.append(newDiv);
 // });
+
+//Write JS to turn on a server listener on port 3000 (assuming const app = express()).
+//app.listen(3000, () => {
+//   console.log("I'm listening on 3000")
+// })

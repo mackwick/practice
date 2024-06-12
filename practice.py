@@ -85,3 +85,39 @@
 # }
 
 # console.log(reverseString("Hello World")) // "dlroW olleH"
+
+
+# Define a Python dictionary named where_my_things_arecontaining a few items; where the keysare things you have, and the valueis the location you keep those things.
+# Write a forloop that iterates over the items in the dictionary and prints each one as My [thing] is kept [location].
+
+# where_my_things_are = {"mind": "money", "money": "mind"}
+
+# for key, val in where_my_things_are.items():
+#     print(f"got my {key} on my {val}")
+
+
+#Translate JS to Python
+
+# function randomNumber(low, max){
+# while (true){
+# const randomNum = Math.floor(Math.random() * max)
+
+# if(randomNum >= low && randomNum <= max){
+# return randomNum
+# }
+# }
+# }
+
+# console.log(randomNumber(10,20)) //random number between 10 and 20
+
+# def random_number(min,max):
+#     compare = True
+#     while (compare == True):
+#         import random
+#         import math
+#         num = math.floor(random.random()*max)
+#         if (num>=min and num<=max):
+#             return num
+#         else:
+#             compare = False
+
