@@ -978,3 +978,133 @@ console log the username and password */
 //app.listen(3000, () => {
 //   console.log("I'm listening on 3000")
 // })
+
+// const peopleArray = [
+//   {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 30,
+//     profession: "Software Engineer",
+//   },
+//   {
+//     firstName: "Jane",
+//     lastName: "Smith",
+//     age: 25,
+//     profession: "Graphic Designer",
+//   },
+//   {
+//     firstName: "Michael",
+//     lastName: "Johnson",
+//     age: 40,
+//     profession: "Data Scientist",
+//   },
+//   {
+//     firstName: "Emily",
+//     lastName: "Williams",
+//     age: 35,
+//     profession: "Marketing Specialist",
+//   },
+//   {
+//     firstName: "Daniel",
+//     lastName: "Brown",
+//     age: 28,
+//     profession: "UX/UI Designer",
+//   },
+//   {
+//     firstName: "Olivia",
+//     lastName: "Davis",
+//     age: 32,
+//     profession: "Financial Analyst",
+//   },
+//   { firstName: "William", lastName: "Jones", age: 45, profession: "Architect" },
+//   { firstName: "Sophia", lastName: "Moore", age: 27, profession: "Teacher" },
+//   {
+//     firstName: "Ethan",
+//     lastName: "Miller",
+//     age: 38,
+//     profession: "Project Manager",
+//   },
+//   {
+//     firstName: "Ava",
+//     lastName: "Wilson",
+//     age: 33,
+//     profession: "Medical Doctor",
+//   },
+// ];
+
+// // create a variable that is an empty array. using the elements in the array below, create an object with properties name (both first and last) and hobby (same as profession).
+
+// const newArr = peopleArray.map((el) => ({
+//   name: `${el.firstName} ${el.lastName}`,
+//   hobby: `${el.profession}`,
+// }));
+
+// console.log(newArr);
+
+//loop over the array and just print all of the titles:
+// const movies = [
+//   { title: "Tokyo Story" },
+//   { title: "Paul Blart: Mall Cop" },
+//   { title: "L'Avventura" },
+// ];
+
+// movies.forEach((el) => {
+//   console.log(el.title);
+// });
+
+// const peopleArray = [
+//   {
+//     firstName: "John",
+//     lastName: "Doe",
+//     age: 30,
+//     profession: "Software Engineer",
+//   },
+//   {
+//     firstName: "Jane",
+//     lastName: "Smith",
+//     age: 25,
+//     profession: "Graphic Designer",
+//   },
+//   {
+//     firstName: "Michael",
+//     lastName: "Johnson",
+//     age: 40,
+//     profession: "Data Scientist",
+//   },
+//   {
+//     firstName: "Emily",
+//     lastName: "Williams",
+//     age: 35,
+//     profession: "Marketing Specialist",
+//   },
+//   {
+//     firstName: "Daniel",
+//     lastName: "Brown",
+//     age: 28,
+//     profession: "UX/UI Designer",
+//   },
+//   {
+//     firstName: "Olivia",
+//     lastName: "Davis",
+//     age: 32,
+//     profession: "Financial Analyst",
+//   },
+//   { firstName: "William", lastName: "Jones", age: 45, profession: "Architect" },
+//   { firstName: "Sophia", lastName: "Moore", age: 27, profession: "Teacher" },
+//   {
+//     firstName: "Ethan",
+//     lastName: "Miller",
+//     age: 38,
+//     profession: "Project Manager",
+//   },
+//   {
+//     firstName: "Ava",
+//     lastName: "Wilson",
+//     age: 33,
+//     profession: "Medical Doctor",
+//   },
+// ];
+
+// //use reduce to concatenate everyone's first name
+
+// console.log(peopleArray.reduce((x, y) => x + y.firstName, ""));
