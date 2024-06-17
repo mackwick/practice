@@ -173,3 +173,31 @@
 #     print("div by 3")
 # else:
 #     print("not div by 3 or 5")
+
+# Define a Python dictionary named where_my_things_arecontaining a few items; where the keysare things you have, and the valueis the location you keep those things.
+# Write a forloop that iterates over the items in the dictionary and prints each one as My [thing] is kept [location].
+
+# where_my_things_are = {'coffee mug': 'desk', 'dog': 'lap', 'candle': 'work altar'}
+
+# for key, val in where_my_things_are.items():
+#     print(f"My {key} is on my {val}")
+
+# students = ['mackwick', 'danny', 'timmy', 'tazzy', 'hojoony']
+# foods = ('tofu', 'cereal', 'quaso', 'cheese', 'wine')
+
+##Using the list and tuple above
+# Create an empty list named `cohort`.
+# Using a `for` loop, add one dictionary to the `cohort` list for each student name. Each dictionary should have this shape:
+# {
+# 'student': 'Tina',
+# 'fav_food': 'Cheeseburger'
+# }
+# Iterate over `cohort` printing out each element.
+
+# cohort = []
+
+# for i, student in enumerate(students):
+#     cohort.append({'student': student, 'fav_food': foods[i]})
+
+# print(cohort)
+

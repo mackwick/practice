@@ -1108,3 +1108,59 @@ console log the username and password */
 // //use reduce to concatenate everyone's first name
 
 // console.log(peopleArray.reduce((x, y) => x + y.firstName, ""));
+
+//write a loop that loops 10 times if the counter variable is equal to 2 or 4, log "I'm special"
+
+// for (let i = 1; i < 11; i++) {
+//   if (i === 2 || i === 4) {
+//     console.log("I'm special");
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+//Find the median number in the following nums array, then console.log that number.
+
+// const nums = [
+//   14, 11, 16, 15, 13, 16, 15, 17, 19, 11, 12, 14, 19, 11, 15, 17, 11, 18, 12,
+//   17, 12, 71, 18, 15, 12,
+// ];
+
+// let sorted = nums.sort((a, b) => a - b);
+// let len = sorted.length;
+// let ev = (sorted[len / 2] + sorted[len / 2 - 1]) / 2;
+// let odd = sorted[Math.floor(len / 2)];
+
+// let median = len % 2 === 0 ? ev : odd;
+
+// console.log(median);
+
+// Remove Django Unchained from this array and replace it with Avatar:
+// const favMovies = [
+//   "Jaws",
+//   "The Fellowship of the Ring",
+//   "Howl's Moving Castle",
+//   "Django Unchained",
+//   "Cloud Atlas",
+//   "The Usual Suspects",
+//   "Toy Story",
+//   "Conan the Barbarian",
+//   "Titanic",
+//   "Harry Potter",
+//   "Fried Green Tomatoes",
+//   "Volver",
+//   "Oculus",
+//   "Seven",
+//   "Black Panther",
+//   "Harry Potter",
+//   "Imitation of Life",
+//   "Snatch",
+//   "Fast and Furious",
+// ];
+
+// favMovies.splice(3, 1);
+// console.log(favMovies);
+
+// let index = favMovies.indexOf("Django Unchained");
+// favMovies.splice(index, 1);
+// console.log(favMovies);
