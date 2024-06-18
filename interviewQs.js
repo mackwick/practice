@@ -157,6 +157,23 @@ var longestCommonPrefix = function (strs) {
 };
 
 //******************************** */
-//**      MERGE TWO SORTED LISTS         */
+//**      REMOVE ELEMENT         */
 //******************************** */
-//if this were two arrays -
+//create a pointer starting at 0
+//iterate through nums
+//if it is the value, do nothing
+//if it is not, move it to the pointer's location and increase the pointer
+//O(n) because it will go through each element once - so the time increases in direct proportion to the length of nums
+
+var removeElement = function (nums, val) {
+  let k = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] != val) {
+      nums[k] = nums[i];
+      k++;
+    }
+  }
+
+  return k;
+};
