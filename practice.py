@@ -201,3 +201,70 @@
 
 # print(cohort)
 
+# Iterate over the key: value pairs in `home_town` and print a string for each item, for example:
+# "city = Arcadia"
+# "state = California"
+# "population = 58000"
+
+# home_town = {
+# 'city': 'Rullfton',
+# 'state': 'NC',
+# 'population': 67000
+# }
+
+# for key, val in home_town.items():
+#     print(f"{key} = {val}")
+
+# Use python filter to create a new list of just the even numbers
+# filt_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# new_list = filter(lambda x: x % 2 == 0, filt_list)
+# print(list(new_list))
+
+# Translate JS to Python
+
+# function randomNumber(low, max){
+# while (true){
+# const randomNum = Math.floor(Math.random() * max)
+
+# if(randomNum >= low && randomNum <= max){
+# return randomNum
+# }
+# }
+# }
+
+# console.log(randomNumber(10,20)) //random number between 10 and 20
+
+# def random_num(min, max):
+#     between = True
+#     while (between == True):
+#         import math
+#         import random
+#         rando_num = math.floor(random.random() * max)
+#         if (rando_num >= min and rando_num <= max):
+#             return rando_num
+#         else:
+#             between = False
+            
+# print(random_num(10,20))
+
+# students = ['mackwick', 'danny', 'timmy', 'tazzy', 'hojoony']
+# foods = ('tofu', 'cereal', 'quaso', 'cheese', 'wine')
+
+##Using the list and tuple above
+# Create an empty list named `cohort`.
+# Using a `for` loop, add one dictionary to the `cohort` list for each student name. Each dictionary should have this shape:
+# {
+# 'student': 'Tina',
+# 'fav_food': 'Cheeseburger'
+# }
+# Iterate over `cohort` printing out each element.
+
+# cohort = []
+
+# for i, student in enumerate(students):
+#     cohort.append({"student": {student}, "fav_food": {foods[i]}})
+    
+# for co in enumerate(cohort):
+#     print(f"{co}")
+    

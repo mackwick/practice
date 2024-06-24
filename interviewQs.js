@@ -177,3 +177,26 @@ var removeElement = function (nums, val) {
 
   return k;
 };
+
+/************************************** */
+/**        Majority Element            */
+/************************************** */
+
+var majorityElement = function (nums) {
+  let map = {};
+  let maj = nums.length / 2;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] in map) {
+      map[nums[i]] += 1;
+    } else {
+      map[nums[i]] = 1;
+    }
+  }
+
+  for (let j = 0; j < nums.length; j++) {
+    if (map[nums[j]] > maj) {
+      return nums[j];
+    }
+  }
+};
