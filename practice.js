@@ -1164,3 +1164,30 @@ console log the username and password */
 // let index = favMovies.indexOf("Django Unchained");
 // favMovies.splice(index, 1);
 // console.log(favMovies);
+
+// Using the following HTML:
+// <form>
+// <input type="text" name="username" placeholder="username">
+// <input type="password" name="password" placeholder="password">
+// <input type="submit" value="Create User">
+// </form>
+
+// console log the username and password
+
+// const form = document.querySelector("form");
+
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault();
+
+//   let formData = new FormData(event.target);
+//   console.log(formData.get("username"));
+//   console.log(formData.get("password"));
+// });
+
+// const arr = [5, 10, 15, 20, 25];
+// // use reduce to reduce the array into a single value
+
+// console.log(arr.reduce((x, y) => x + y, 0));
+
+// How would you add an event listener to a header saved in the variable $header using jQuery?
+// $header.on("click", (event) => {...})
