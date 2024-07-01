@@ -122,17 +122,17 @@
 //   next: null
 // }
 
+//calling example:
+//const newNode = new Node(4) -- create a node with a value of 4 that points to null
+
+//because these all create a new node, use a separate class to build a node and then just call it
+
 class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
   }
 }
-
-//calling example:
-//const newNode = new Node(4) -- create a node with a value of 4 that points to null
-
-//because these all create a new node, use a separate class to build a node and then just call it
 
 class LinkedList {
   //create a new node when creating the list
@@ -144,14 +144,38 @@ class LinkedList {
   }
 
   //create new node and add to end
-  push(value) {}
+  push(value) {
+    const newNode = new Node(value);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.length++;
+    return this;
+  }
 
   //create new node and add to beginning
-  unshift(value) {}
+  unshift(value) {
+    const newNode = new Node(value);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+    return this;
+  }
 
   //create new node and insert it
   insert(index, value) {}
 }
 
-let myLInkedLIst = new LinkedList(4);
+let myLInkedLIst = new LinkedList(7);
+myLInkedLIst.push(4);
+myLInkedLIst.unshift(3);
 console.log(myLInkedLIst);
