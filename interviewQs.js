@@ -1,5 +1,5 @@
 //******************************** */
-//**           TWO SUM             */
+//**           TWO SUM             */ <------------------- Reviewed July 1, 2024 (do again soon)
 //******************************** */
 
 //naive, brute force: loop through all of them until there is a match - O(n^2)
@@ -42,7 +42,7 @@ var twoSum = function (nums, target) {
 };
 
 //******************************** */
-//**      PALINDROME NUMBER        */
+//**      PALINDROME NUMBER        */ <------------------- Reviewed July 1, 2024 (do again soon)
 //******************************** */
 //Naive/easy - convert to string and use pointers OR split/reverse/join
 //better -
