@@ -103,7 +103,7 @@ var isPalindrome = function (x) {
 };
 
 //******************************** */
-//**      ROMAN TO INTEGER         */
+//**      ROMAN TO INTEGER         */ <------------------- Reviewed July 8, 2024
 //******************************** */
 //Naive - the giant pile of horseshit I wrote
 //better - use a hash map and keep in mind that if the number is followed by a greater number, it should be considered a negative
@@ -126,7 +126,7 @@ var romanToInt = function (s) {
 };
 
 //******************************** */
-//**      LONGEST COMMON PREFIX         */
+//**      LONGEST COMMON PREFIX         */<------------------- Reviewed July 8, 2024 (review again soonISH)
 //******************************** */
 var longestCommonPrefix = function (strs) {
   let prefix = "";
@@ -157,7 +157,7 @@ var longestCommonPrefix = function (strs) {
 };
 
 //******************************** */
-//**      REMOVE ELEMENT         */
+//**      REMOVE ELEMENT         *//<------------------- Reviewed July 8, 2024 (review again soonISH)
 //******************************** */
 //create a pointer starting at 0
 //iterate through nums
@@ -179,12 +179,12 @@ var removeElement = function (nums, val) {
 };
 
 /************************************** */
-/**        Majority Element            */
+// /**        Majority Element            */<------------------- Reviewed July 8, 2024
 /************************************** */
 
 var majorityElement = function (nums) {
+  let half = nums.length / 2;
   let map = {};
-  let maj = nums.length / 2;
 
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] in map) {
@@ -192,11 +192,38 @@ var majorityElement = function (nums) {
     } else {
       map[nums[i]] = 1;
     }
+
+    if (map[nums[i]] > half) {
+      return nums[i];
+    }
+  }
+};
+
+/************************************** */
+// /**        MERGE SORTED ARRAY           */
+/************************************** */
+//set variable for final element in nums1
+//decrease m and n by 1 to get the indices
+//check greater or less than starting with the last element in nums1 and replace/decrement where appropriate
+var merge = function (nums1, m, nums2, n) {
+  let last = m + n - 1;
+  m--;
+  n--;
+
+  while (m >= 0 && n >= 0) {
+    if (nums1[m] > nums2[n]) {
+      nums1[last] = nums1[m];
+      m--;
+    } else {
+      nums1[last] = nums2[n];
+      n--;
+    }
+    last--;
   }
 
-  for (let j = 0; j < nums.length; j++) {
-    if (map[nums[j]] > maj) {
-      return nums[j];
-    }
+  while (n >= 0) {
+    nums1[last] = nums2[n];
+    n--;
+    last--;
   }
 };
