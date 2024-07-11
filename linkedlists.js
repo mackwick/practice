@@ -171,11 +171,24 @@ class LinkedList {
     return this;
   }
 
+  shift() {
+    if (!this.head) return undefined;
+    let temp = this.head;
+    this.head = this.head.next;
+    temp.next = null;
+    this.length--;
+    if (this.length === 0) {
+      this.tail = null;
+    }
+    return temp;
+  }
+
   //create new node and insert it
   insert(index, value) {}
 }
 
-let myLInkedLIst = new LinkedList(7);
-myLInkedLIst.push(4);
-myLInkedLIst.unshift(3);
-console.log(myLInkedLIst);
+let myLInkedLIst = new LinkedList(2);
+myLInkedLIst.push(1);
+console.log(myLInkedLIst.shift());
+console.log(myLInkedLIst.shift());
+console.log(myLInkedLIst.shift());
