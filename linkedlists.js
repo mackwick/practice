@@ -183,12 +183,34 @@ class LinkedList {
     return temp;
   }
 
-  //create new node and insert it
-  insert(index, value) {}
+  get(index) {
+    if (index < 0 || index >= this.length) {
+      return undefined;
+    }
+    let temp = this.head;
+    for (let i = 0; i < index; i++) {
+      temp = temp.next;
+    }
+    return temp;
+  }
+
+  set(index, value) {
+    let temp = this.get(index);
+    if (temp) {
+      temp.value = value;
+
+      //true that it existed and was changed
+      return true;
+    }
+    //false that it was not changed
+    return false;
+  }
 }
 
-let myLInkedLIst = new LinkedList(2);
-myLInkedLIst.push(1);
-console.log(myLInkedLIst.shift());
-console.log(myLInkedLIst.shift());
-console.log(myLInkedLIst.shift());
+let myLinkedList = new LinkedList(0);
+myLinkedList.push(1);
+myLinkedList.push(2);
+myLinkedList.push(3);
+console.log(myLinkedList.get(-1));
+console.log(myLinkedList.get(10));
+console.log(myLinkedList.get(2));
