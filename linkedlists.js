@@ -157,6 +157,22 @@ class LinkedList {
     return this;
   }
 
+  pop() {
+    if (!this.tail) return undefined;
+    let temp = this.tail;
+    let pre = this.head;
+    while (pre.next != temp) {
+      pre = pre.next;
+    }
+    this.tail = pre;
+    this.tail.next = null;
+    this.length--;
+    if (this.length === 0) {
+      this.tail = null;
+    }
+    return temp;
+  }
+
   //create new node and add to beginning
   unshift(value) {
     const newNode = new Node(value);
@@ -205,12 +221,38 @@ class LinkedList {
     //false that it was not changed
     return false;
   }
+
+  remove(index) {
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+    if (index < 0 || index >= this.length) return undefined;
+    const before = this.get(index - 1);
+    const temp = before.next;
+    before.next = temp.next;
+    temp.next = null;
+    this.length--;
+    return temp;
+  }
+
+  reverse() {
+    let temp = this.head;
+    this.head = this.tail;
+    this.tail = temp;
+    let next = temp.next;
+    let prev = null;
+    for (let i = 0; i < this.length; i++) {
+      next = temp.next;
+      temp.next = prev;
+      prev = temp;
+      temp = next;
+    }
+    return this;
+  }
 }
 
 let myLinkedList = new LinkedList(0);
 myLinkedList.push(1);
 myLinkedList.push(2);
 myLinkedList.push(3);
-console.log(myLinkedList.get(-1));
-console.log(myLinkedList.get(10));
-console.log(myLinkedList.get(2));
+console.log(myLinkedList);
+console.log(myLinkedList.reverse());
