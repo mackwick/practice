@@ -94,3 +94,27 @@
 //     age: number
 //     email?: string
 // }
+
+// Write a function that returns `${monthName} is ${checkSummer}`; using an enum of the months to check.
+// enum Month {
+//   Jan = 1,
+//   Feb,
+//   Mar,
+//   Apr,
+//   May,
+//   Jun,
+//   Jul,
+//   Aug,
+//   Sep,
+//   Oct,
+//   Nov,
+//   Dec,
+// }
+
+// function isItSummer(month: Month): string {
+//   let isSummer: boolean = false;
+//   if (month === Month.Jun || month === Month.Jul || month === Month.Aug) {
+//     isSummer = true;
+//   }
+//   return `${month} being in summer is ${isSummer}`;
+}
