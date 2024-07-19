@@ -261,3 +261,20 @@ var canConstruct = function (ransomNote, magazine) {
 };
 
 //O(n + m) - because we go through every element in each list once
+
+/************************************** */
+// /**        Length of last word            */
+/************************************** */
+
+var lengthOfLastWord = function (s) {
+  let split = s.split(" ");
+  let last = split.length - 1;
+
+  while (split[last] === "" || split[last] === " ") {
+    last--;
+  }
+
+  return split[last].length;
+};
+
+//O(n) -- goes through string once and could potentially go through split array once
