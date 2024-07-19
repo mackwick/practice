@@ -1250,12 +1250,12 @@ console log the username and password */
 // console.log(peopleArray.reduce((x, y) => x + y.firstName, ""));
 
 //Use dot notation to pull up Lisa's hometown from this object on the console:
-const aboutMe = {
-  name: "Lisa Simpson",
-  hometown: "Springfield, Oregon",
-  age: 8,
-  isABoss: true,
-  hobbies: ["playing the saxophone", "political causes", "saving the world"],
-};
+// const aboutMe = {
+//   name: "Lisa Simpson",
+//   hometown: "Springfield, Oregon",
+//   age: 8,
+//   isABoss: true,
+//   hobbies: ["playing the saxophone", "political causes", "saving the world"],
+// };
 
-console.log(aboutMe.hometown);
+// console.log(aboutMe.hometown);

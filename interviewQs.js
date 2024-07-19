@@ -227,3 +227,37 @@ var merge = function (nums1, m, nums2, n) {
     last--;
   }
 };
+
+/************************************** */
+// /**        Ransom Note            */
+/************************************** */
+
+var canConstruct = function (ransomNote, magazine) {
+  if (ransomNote.length > magazine.length) return false;
+
+  //create hm of magazine
+  const hash = {};
+
+  for (let i = 0; i < magazine.length; i++) {
+    let char = magazine.charAt(i);
+    if (char in hash) {
+      hash[char]++;
+    } else {
+      hash[char] = 1;
+    }
+  }
+
+  //iterate through ransomnote and check for charAt
+  for (let j = 0; j < ransomNote.length; j++) {
+    let char = ransomNote.charAt(j);
+    if (char in hash && hash[char] != 0) {
+      hash[char]--;
+    } else {
+      return false;
+    }
+  }
+
+  return true;
+};
+
+//O(n + m) - because we go through every element in each list once
