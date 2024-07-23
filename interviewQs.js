@@ -278,3 +278,29 @@ var lengthOfLastWord = function (s) {
 };
 
 //O(n) -- goes through string once and could potentially go through split array once
+
+/************************************** */
+// /**        Best time to buy and sell stock            */
+/************************************** */
+
+var maxProfit = function (prices) {
+  let max = 0;
+  let left = 0;
+  let right = 1;
+
+  while (right < prices.length) {
+    if (prices[left] < prices[right]) {
+      let profit = prices[right] - prices[left];
+      if (max < profit) {
+        max = profit;
+      }
+    } else {
+      left = right; //change it to the right one because it is a lower cost day
+    }
+    right++;
+  }
+
+  return max;
+};
+
+//O(n) ---> just going through the whole thing once
