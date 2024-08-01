@@ -1259,3 +1259,49 @@ console log the username and password */
 // };
 
 // console.log(aboutMe.hometown);
+
+// const findValue = (investment, years) => {
+//   for (let i = 0; i < years; i++) {
+//     if (i === 7) {
+//       investment = investment / 4;
+//     } else {
+//       investment = investment * 1.1;
+//     }
+//     console.log(`Year ${i}: $${investment}`);
+//   }
+// };
+
+// findValue(1000, 10);
+
+//Write an arrow function that logs hello to the name of the person with a default name of "you":
+
+// const func = (name = "you") => {
+//   console.log(`Hello, ${name}`);
+// };
+
+// func();
+// func("Mack");
+//How would you sort this array in reverse rabc order?
+const favMovies = [
+  "Jaws",
+  "The Fellowship of the Ring",
+  "Howl's Moving Castle",
+  "Django Unchained",
+  "Cloud Atlas",
+  "The Usual Suspects",
+  "Toy Story",
+  "Conan the Barbarian",
+  "Titanic",
+  "Harry Potter",
+  "Fried Green Tomatoes",
+  "Volver",
+  "Oculus",
+  "Seven",
+  "Black Panther",
+  "Harry Potter",
+  "Imitation of Life",
+  "Snatch",
+  "Fast and Furious",
+];
+
+console.log(favMovies.sort((a, b) => b.localeCompare(a)));
