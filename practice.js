@@ -1282,26 +1282,51 @@ console log the username and password */
 // func();
 // func("Mack");
 //How would you sort this array in reverse rabc order?
-const favMovies = [
-  "Jaws",
-  "The Fellowship of the Ring",
-  "Howl's Moving Castle",
-  "Django Unchained",
-  "Cloud Atlas",
-  "The Usual Suspects",
-  "Toy Story",
-  "Conan the Barbarian",
-  "Titanic",
-  "Harry Potter",
-  "Fried Green Tomatoes",
-  "Volver",
-  "Oculus",
-  "Seven",
-  "Black Panther",
-  "Harry Potter",
-  "Imitation of Life",
-  "Snatch",
-  "Fast and Furious",
-];
+// const favMovies = [
+//   "Jaws",
+//   "The Fellowship of the Ring",
+//   "Howl's Moving Castle",
+//   "Django Unchained",
+//   "Cloud Atlas",
+//   "The Usual Suspects",
+//   "Toy Story",
+//   "Conan the Barbarian",
+//   "Titanic",
+//   "Harry Potter",
+//   "Fried Green Tomatoes",
+//   "Volver",
+//   "Oculus",
+//   "Seven",
+//   "Black Panther",
+//   "Harry Potter",
+//   "Imitation of Life",
+//   "Snatch",
+//   "Fast and Furious",
+// ];
 
-console.log(favMovies.sort((a, b) => b.localeCompare(a)));
+// console.log(favMovies.sort((a, b) => b.localeCompare(a)));
+
+//Write an index route (listing all fruits) for an array "fruits" using the template stored in index.ejs.
+/* 
+app.get("/fruits", (req, res) => {
+  res.render("index.ejs", {fruits})
+})
+
+*/
+
+//How would you console log "Tokyo Story" with the following array:
+// const movies = [
+//   { title: "Tokyo Story" },
+//   { title: "Paul Blart: Mall Cop" },
+//   { title: "L'Avventura" },
+// ];
+// console.log(movies[0].title);
+
+//Create a destroy route to delete a fruit from a collection and redirect to /fruits
+/* 
+app.delete("/fruits/:id", (req, res) => {
+  arr.splice(req.params.id, 1)
+  res.redirect("/fruits")
+})
+
+*/
