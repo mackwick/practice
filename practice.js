@@ -1330,3 +1330,97 @@ app.delete("/fruits/:id", (req, res) => {
 })
 
 */
+
+const users = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "johndoe@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1027",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac quam id enim semper congue.",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    email: "janesmith@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1028",
+    bio: "Fusce semper augue eget quam semper, eget tincidunt quam rhoncus.",
+  },
+  {
+    id: 3,
+    name: "Peter Jones",
+    email: "peterjones@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1029",
+    bio: "Donec ac enim eget enim posuere tincidunt.",
+  },
+  {
+    id: 4,
+    name: "Mary Brown",
+    email: "marybrown@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1030",
+    bio: "Sed ut enim vel enim luctus tincidunt.",
+  },
+  {
+    id: 5,
+    name: "David Williams",
+    email: "davidwilliams@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1031",
+    bio: "Nullam nec ligula ac eros aliquam auctor.",
+  },
+  {
+    id: 6,
+    name: "Sarah Miller",
+    email: "sarahmiller@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1032",
+    bio: "Donec ut enim vitae quam vehicula hendrerit.",
+  },
+  {
+    id: 7,
+    name: "Michael Davis",
+    email: "michaeldavis@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1033",
+    bio: "Sed ut quam eget neque convallis faucibus.",
+  },
+  {
+    id: 8,
+    name: "Patricia Wilson",
+    email: "patriciawilson@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1034",
+    bio: "Donec sed eros non enim laoreet laoreet.",
+  },
+  {
+    id: 9,
+    name: "James Taylor",
+    email: "jamestaylor@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1035",
+    bio: "Nullam semper quam non dui semper, in aliquam leo semper.",
+  },
+  {
+    id: 10,
+    name: "Susan Anderson",
+    email: "susananderson@example.com",
+    profilePicture: "https://picsum.photos/200/300?image=1036",
+    bio: "Donec nec quam eget ipsum egestas semper.",
+  },
+];
+
+// Using the array above loop over each user
+// generate a div and put the users info in the div -- add an HTML w/ boilerplate and a <div> with the id "users"
+// using whatever html you think works best
+
+const usersDiv = document.querySelector("#practice");
+
+users.forEach((u) => {
+  const div = document.createElement("div");
+  const img = document.createElement("img");
+  img.setAttribute("src", `${u.profilePicture}`);
+  const h1 = document.createElement("h1");
+  h1.innerText = u.name;
+  const h2 = document.createElement("h2");
+  h2.innerText = u.email;
+  const p = document.createElement("p");
+  p.innerText = u.bio;
+
+  div.append(img, h1, h2, p);
+  usersDiv.append(div);
+});

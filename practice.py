@@ -333,3 +333,39 @@
 #             return False
             
 # print(random_number(10,20))
+
+### In Python - create a variable "new_num" where the variable is the input in response to "give me a number: "
+### Write an if statement that first checks if the number is divisible by 5
+### if true, print "div by 5"
+### if not, check if its divisible 3
+### if true, print "div by 3"
+### if false, "not div by 3 or 5"
+
+# new_num = int(input("give me a number:"))
+
+# if (new_num % 5 == 0):
+#     print("div by 5")
+# elif (new_num % 3 == 0):
+#     print("div by 3")
+# else:
+#     print("not div 5 or 3")
+
+#Use python filter to create a new list of just the even numbers
+# filt_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# new_list = filter(lambda x: x%2 == 0, filt_list)
+
+# print(list(new_list))
+
+# In python, how would you print "Mack" using this dictionary:
+# myself = {"name": "Mack", "age": 35}
+
+# print(myself["name"])
+
+# Create a dictionary named `home_town` containing the keys of `city`, `state` and `population`.
+# Print a string with this format:
+# "I was born in city, state - population of population"
+
+# home_town = {'city': 'rton', 'state': 'nc', 'population': 67000}
+
+# print(f"I was born in {home_town['city']}, {home_town['state']} - population of {home_town['population']}")
