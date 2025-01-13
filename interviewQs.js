@@ -1,3 +1,33 @@
+/************************************** */
+// /**        MERGE SORTED ARRAY           */
+//REVIEWED: Jan. 13, 2025
+/************************************** */
+//set variable for final element in nums1
+//decrease m and n by 1 to get the indices
+//check greater or less than starting with the last element in nums1 and replace/decrement where appropriate
+var merge = function (nums1, m, nums2, n) {
+  let last = m + n - 1;
+  m--;
+  n--;
+
+  while (m >= 0 && n >= 0) {
+    if (nums1[m] > nums2[n]) {
+      nums1[last] = nums1[m];
+      m--;
+    } else {
+      nums1[last] = nums2[n];
+      n--;
+    }
+    last--;
+  }
+
+  while (n >= 0) {
+    nums1[last] = nums2[n];
+    n--;
+    last--;
+  }
+};
+
 //******************************** */
 //**           TWO SUM             */ <------------------- Reviewed July 1, 2024 (do again soon)
 //******************************** */
@@ -10,17 +40,20 @@
 
 //example to try: ([2,7,11,15], 9) -- expected: [0,1]
 
-var twoSum = function (nums, target) {
-  let map = {};
+var twoSum = function(nums, target) {
+  let map = {}
 
-  for (let i = 0; i < nums.length; i++) {
-    let diff = target - nums[i];
-    if (diff in map) {
-      return [map[diff], i];
-    } else {
-      map[nums[i]] = i;
-    }
+  for (let i=0; i<nums.length; i++) {
+     let match = target - nums[i]
+
+     if (match in map) {
+         return [i, map[match]]
+     } else {
+         map[nums[i]] = i
+     }
   }
+
+}
 
   //     indices = []
   //     targetMet = false
@@ -196,35 +229,6 @@ var majorityElement = function (nums) {
     if (map[nums[i]] > half) {
       return nums[i];
     }
-  }
-};
-
-/************************************** */
-// /**        MERGE SORTED ARRAY           */
-/************************************** */
-//set variable for final element in nums1
-//decrease m and n by 1 to get the indices
-//check greater or less than starting with the last element in nums1 and replace/decrement where appropriate
-var merge = function (nums1, m, nums2, n) {
-  let last = m + n - 1;
-  m--;
-  n--;
-
-  while (m >= 0 && n >= 0) {
-    if (nums1[m] > nums2[n]) {
-      nums1[last] = nums1[m];
-      m--;
-    } else {
-      nums1[last] = nums2[n];
-      n--;
-    }
-    last--;
-  }
-
-  while (n >= 0) {
-    nums1[last] = nums2[n];
-    n--;
-    last--;
   }
 };
 
