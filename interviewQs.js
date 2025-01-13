@@ -29,7 +29,7 @@ var merge = function (nums1, m, nums2, n) {
 };
 
 //******************************** */
-//**           TWO SUM             */ <------------------- Reviewed July 1, 2024 (do again soon)
+//**           TWO SUM             */ <------------------- Reviewed Jan. 13, 2025
 //******************************** */
 
 //naive, brute force: loop through all of them until there is a match - O(n^2)
