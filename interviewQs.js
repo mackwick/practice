@@ -40,42 +40,41 @@ var merge = function (nums1, m, nums2, n) {
 
 //example to try: ([2,7,11,15], 9) -- expected: [0,1]
 
-var twoSum = function(nums, target) {
-  let map = {}
+var twoSum = function (nums, target) {
+  let map = {};
 
-  for (let i=0; i<nums.length; i++) {
-     let match = target - nums[i]
+  for (let i = 0; i < nums.length; i++) {
+    let match = target - nums[i];
 
-     if (match in map) {
-         return [i, map[match]]
-     } else {
-         map[nums[i]] = i
-     }
+    if (match in map) {
+      return [i, map[match]];
+    } else {
+      map[nums[i]] = i;
+    }
   }
-
-}
-
-  //     indices = []
-  //     targetMet = false
-  //     i = 0
-  //     x = i + 1
-
-  //     while(targetMet === false && i < nums.length){
-  //         if (nums[i] + nums[x] === target){
-  //             indices.push(i, x)
-  //             targetMet = true
-  //         } else if (x < nums.length -1){
-  //             x++
-  //         } else {
-  //             i++
-  //             x = i + 1
-  //         }
-  //     }
-  //     return indices
 };
 
+//     indices = []
+//     targetMet = false
+//     i = 0
+//     x = i + 1
+
+//     while(targetMet === false && i < nums.length){
+//         if (nums[i] + nums[x] === target){
+//             indices.push(i, x)
+//             targetMet = true
+//         } else if (x < nums.length -1){
+//             x++
+//         } else {
+//             i++
+//             x = i + 1
+//         }
+//     }
+//     return indices
+// };
+
 //******************************** */
-//**      PALINDROME NUMBER        */ <------------------- Reviewed July 1, 2024 (do again soon)
+//**      PALINDROME NUMBER        */ <------------------- Reviewed Jan. 20
 //******************************** */
 //Naive/easy - convert to string and use pointers OR split/reverse/join
 //better -
@@ -136,7 +135,7 @@ var isPalindrome = function (x) {
 };
 
 //******************************** */
-//**      ROMAN TO INTEGER         */ <------------------- Reviewed July 8, 2024
+//**      ROMAN TO INTEGER         */ <------------------- Reviewed Jan. 20, 2025
 //******************************** */
 //Naive - the giant pile of horseshit I wrote
 //better - use a hash map and keep in mind that if the number is followed by a greater number, it should be considered a negative
