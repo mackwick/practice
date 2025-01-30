@@ -1,6 +1,7 @@
+//TO REVIEW AGAIN SOON
+
 /************************************** */
-// /**        MERGE SORTED ARRAY           */
-//REVIEWED: Jan. 13, 2025
+// /**        MERGE SORTED ARRAY           *//REVIEWED: Jan. 13, 2025
 /************************************** */
 //set variable for final element in nums1
 //decrease m and n by 1 to get the indices
@@ -74,7 +75,7 @@ var twoSum = function (nums, target) {
 // };
 
 //******************************** */
-//**      PALINDROME NUMBER        */ <------------------- Reviewed Jan. 20
+//**      PALINDROME NUMBER        */ <------------------- Reviewed Jan. 20, 2025
 //******************************** */
 //Naive/easy - convert to string and use pointers OR split/reverse/join
 //better -
@@ -135,7 +136,7 @@ var isPalindrome = function (x) {
 };
 
 //******************************** */
-//**      ROMAN TO INTEGER         */ <------------------- Reviewed Jan. 20, 2025
+//**      ROMAN TO INTEGER         */ <------------------- Reviewed Jan. 30, 2025
 //******************************** */
 //Naive - the giant pile of horseshit I wrote
 //better - use a hash map and keep in mind that if the number is followed by a greater number, it should be considered a negative
@@ -156,6 +157,73 @@ var romanToInt = function (s) {
   }
   return result;
 };
+
+/************************************** */
+// /**  Best time to buy and sell stock *// Reviewed Jan. 30, 2025
+/*******      ******************************* */
+
+var maxProfit = function (prices) {
+  let max = 0;
+  let left = 0;
+  let right = 1;
+
+  while (right < prices.length) {
+    if (prices[left] < prices[right]) {
+      let profit = prices[right] - prices[left];
+      if (max < profit) {
+        max = profit;
+      }
+    } else {
+      left = right; //change it to the right one because it is a lower cost day
+    }
+    right++;
+  }
+
+  return max;
+};
+
+//O(n) ---> just going through the whole thing once
+
+/************************************** */
+// /**        Length of last word   */// REVIEWED Jan. 30, 2025
+/************************************** */
+
+var lengthOfLastWord = function (s) {
+  let length = 0;
+  let last = s.length - 1;
+
+  while (last >= 0) {
+    if (s.charAt(last) === " ") {
+      last--;
+    } else {
+      length++;
+      if (s.charAt(last - 1) === " ") {
+        return length;
+      } else {
+        last--;
+      }
+    }
+  }
+
+  return length;
+};
+
+//OR
+
+var lengthOfLastWord = function (s) {
+  let split = s.split(" ");
+  let last = split.length - 1;
+
+  while (split[last] === "" || split[last] === " ") {
+    last--;
+  }
+
+  return split[last].length;
+};
+
+//O(n) -- goes through string once and could potentially go through split array once
+
+//REV NEXT
 
 //******************************** */
 //**      LONGEST COMMON PREFIX         */<------------------- Reviewed July 8, 2024 (review again soonISH)
@@ -186,49 +254,6 @@ var longestCommonPrefix = function (strs) {
   //         }
   //     }
   //    return prefix
-};
-
-//******************************** */
-//**      REMOVE ELEMENT         *//<------------------- Reviewed July 8, 2024 (review again soonISH)
-//******************************** */
-//create a pointer starting at 0
-//iterate through nums
-//if it is the value, do nothing
-//if it is not, move it to the pointer's location and increase the pointer
-//O(n) because it will go through each element once - so the time increases in direct proportion to the length of nums
-
-var removeElement = function (nums, val) {
-  let k = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] != val) {
-      nums[k] = nums[i];
-      k++;
-    }
-  }
-
-  return k;
-};
-
-/************************************** */
-// /**        Majority Element            */<------------------- Reviewed July 8, 2024
-/************************************** */
-
-var majorityElement = function (nums) {
-  let half = nums.length / 2;
-  let map = {};
-
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] in map) {
-      map[nums[i]] += 1;
-    } else {
-      map[nums[i]] = 1;
-    }
-
-    if (map[nums[i]] > half) {
-      return nums[i];
-    }
-  }
 };
 
 /************************************** */
@@ -266,8 +291,30 @@ var canConstruct = function (ransomNote, magazine) {
 //O(n + m) - because we go through every element in each list once
 
 /************************************** */
-// /**        Length of last word            */
+// /**        Length of last word   */// REVIEWED Jan. 30, 2025
 /************************************** */
+
+var lengthOfLastWord = function (s) {
+  let length = 0;
+  let last = s.length - 1;
+
+  while (last >= 0) {
+    if (s.charAt(last) === " ") {
+      last--;
+    } else {
+      length++;
+      if (s.charAt(last - 1) === " ") {
+        return length;
+      } else {
+        last--;
+      }
+    }
+  }
+
+  return length;
+};
+
+//OR
 
 var lengthOfLastWord = function (s) {
   let split = s.split(" ");
@@ -281,32 +328,6 @@ var lengthOfLastWord = function (s) {
 };
 
 //O(n) -- goes through string once and could potentially go through split array once
-
-/************************************** */
-// /**        Best time to buy and sell stock            */
-/************************************** */
-
-var maxProfit = function (prices) {
-  let max = 0;
-  let left = 0;
-  let right = 1;
-
-  while (right < prices.length) {
-    if (prices[left] < prices[right]) {
-      let profit = prices[right] - prices[left];
-      if (max < profit) {
-        max = profit;
-      }
-    } else {
-      left = right; //change it to the right one because it is a lower cost day
-    }
-    right++;
-  }
-
-  return max;
-};
-
-//O(n) ---> just going through the whole thing once
 
 /************************************** */
 // /**        Merge Two Sorted Lists            */ -----> did July 29, do again soooooon
@@ -345,4 +366,87 @@ var mergeTwoLists = function (list1, list2) {
   }
 
   return dummy.next;
+};
+
+//FOUND PRETTY EASY - ONLY REVIEW AFTER OTHERS
+
+/************************************** */
+// /**        Majority Element            */<------------------- Reviewed Jan. 30, 2025
+/************************************** */
+
+var majorityElement = function (nums) {
+  let half = nums.length / 2;
+  let map = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] in map) {
+      map[nums[i]] += 1;
+    } else {
+      map[nums[i]] = 1;
+    }
+
+    if (map[nums[i]] > half) {
+      return nums[i];
+    }
+  }
+};
+
+//******************************** */
+//**      REMOVE ELEMENT         *//<------------------- Reviewed Jan. 30, 2025
+//******************************** */
+//create a pointer starting at 0
+//iterate through nums
+//if it is the value, do nothing
+//if it is not, move it to the pointer's location and increase the pointer
+//O(n) because it will go through each element once - so the time increases in direct proportion to the length of nums
+
+var removeElement = function (nums, val) {
+  let k = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] != val) {
+      nums[k] = nums[i];
+      k++;
+    }
+  }
+
+  return k;
+};
+
+//OR
+
+var removeElement = function (nums, val) {
+  let k = 0;
+  let i = 0;
+
+  while (i < nums.length) {
+    if (nums[i] === val) {
+      nums.splice(i, 1);
+    } else {
+      i++;
+      k++;
+    }
+  }
+
+  return k;
+};
+
+//******************************** */
+//**   REMOVE DUPLICATES FROM SORTED ARRAY      *//<------------------- Reviewed Jan. 30, 2025
+//******************************** */
+var removeDuplicates = function (nums) {
+  //1,1,2
+  let k = nums.length;
+  let i = 0;
+
+  while (i < nums.length) {
+    if (nums[i] === nums[i + 1]) {
+      nums.splice(i, 1);
+    } else {
+      i++;
+      k++;
+    }
+  }
+
+  return k;
 };
