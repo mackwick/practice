@@ -226,19 +226,20 @@ var lengthOfLastWord = function (s) {
 //REV NEXT
 
 //******************************** */
-//**      LONGEST COMMON PREFIX         */<------------------- Reviewed July 8, 2024 (review again soonISH)
+//**      LONGEST COMMON PREFIX         */<------------------- Reviewed Feb. 6, 2025
 //******************************** */
 var longestCommonPrefix = function (strs) {
   let prefix = "";
 
   for (let i = 0; i < strs[0].length; i++) {
-    let char = strs[0][i];
-    for (let j = 1; j < strs.length; j++) {
-      if (i >= strs[j].length || strs[j][i] !== char) {
+    //flower
+    let char = strs[0].charAt(i);
+    for (let string of strs) {
+      if (i > string.length || char != string.charAt(i)) {
         return prefix;
       }
     }
-    prefix += char;
+    prefix = prefix + char;
   }
 
   return prefix;
