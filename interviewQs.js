@@ -226,7 +226,7 @@ var lengthOfLastWord = function (s) {
 //REV NEXT
 
 //******************************** */
-//**      LONGEST COMMON PREFIX         */<------------------- Reviewed Feb. 6, 2025
+//**      LONGEST COMMON PREFIX         */<------------------- Reviewed Feb. 11, 2025
 //******************************** */
 var longestCommonPrefix = function (strs) {
   let prefix = "";
@@ -257,6 +257,66 @@ var longestCommonPrefix = function (strs) {
   //    return prefix
 };
 
+/************************************** */
+// /**  Find the Index of the first occurance in a string*/ -----> did Feb. 11, 2025
+/************************************** */
+
+var strStr = function (haystack, needle) {
+  return haystack.indexOf(needle);
+};
+
+/************************************** */
+// /**        Valid Palindrome            */ ---------------- Feb. 11, 2025
+/************************************** */
+
+var isPalindrome = function (s) {
+  s = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  let x = 0;
+  let y = s.length - 1;
+
+  while (x < y) {
+    if (s.charAt(x) === s.charAt(y)) {
+      x++;
+      y--;
+    } else {
+      return false;
+    }
+  }
+  return true;
+};
+
+// / and / → These slashes define the start and end of the regular expression.
+// ^ (caret inside []) means "not" (negation).
+// a-z means "all lowercase letters".
+// 0-9 means "all digits from 0 to 9".
+// So, [^a-z0-9] means "any character that is NOT a lowercase letter or a digit" (such as spaces, punctuation, and special characters).
+// g → This is the global flag, which means replace all matches (not just the first one).
+
+/************************************** */
+// /**        Is Subsequence            */ ---------------- Feb. 11, 2025
+/************************************** */
+//use the first example to draw it out if you get stuck. It's not as hard as you're making it.
+
+var isSubsequence = function (s, t) {
+  if (s.length === 0) return true;
+
+  let i = 0;
+  let j = 0;
+
+  while (j < t.length) {
+    if (s[i] === t[j]) {
+      if (i === s.length - 1) {
+        return true;
+      }
+      i++;
+      j++;
+    } else {
+      j++;
+    }
+  }
+
+  return false;
+};
 /************************************** */
 // /**        Ransom Note            */
 /************************************** */
@@ -290,45 +350,6 @@ var canConstruct = function (ransomNote, magazine) {
 };
 
 //O(n + m) - because we go through every element in each list once
-
-/************************************** */
-// /**        Length of last word   */// REVIEWED Jan. 30, 2025
-/************************************** */
-
-var lengthOfLastWord = function (s) {
-  let length = 0;
-  let last = s.length - 1;
-
-  while (last >= 0) {
-    if (s.charAt(last) === " ") {
-      last--;
-    } else {
-      length++;
-      if (s.charAt(last - 1) === " ") {
-        return length;
-      } else {
-        last--;
-      }
-    }
-  }
-
-  return length;
-};
-
-//OR
-
-var lengthOfLastWord = function (s) {
-  let split = s.split(" ");
-  let last = split.length - 1;
-
-  while (split[last] === "" || split[last] === " ") {
-    last--;
-  }
-
-  return split[last].length;
-};
-
-//O(n) -- goes through string once and could potentially go through split array once
 
 /************************************** */
 // /**        Merge Two Sorted Lists            */ -----> did July 29, do again soooooon
@@ -369,7 +390,7 @@ var mergeTwoLists = function (list1, list2) {
   return dummy.next;
 };
 
-//FOUND PRETTY EASY - ONLY REVIEW AFTER OTHERS
+//-------------------------------PRETTY EASY - ONLY REVIEW AFTER OTHERS---------------------------------------------------------------
 
 /************************************** */
 // /**        Majority Element            */<------------------- Reviewed Jan. 30, 2025
@@ -451,3 +472,42 @@ var removeDuplicates = function (nums) {
 
   return k;
 };
+
+/************************************** */
+// /**        Length of last word   */// REVIEWED Jan. 30, 2025
+/************************************** */
+
+var lengthOfLastWord = function (s) {
+  let length = 0;
+  let last = s.length - 1;
+
+  while (last >= 0) {
+    if (s.charAt(last) === " ") {
+      last--;
+    } else {
+      length++;
+      if (s.charAt(last - 1) === " ") {
+        return length;
+      } else {
+        last--;
+      }
+    }
+  }
+
+  return length;
+};
+
+//OR
+
+var lengthOfLastWord = function (s) {
+  let split = s.split(" ");
+  let last = split.length - 1;
+
+  while (split[last] === "" || split[last] === " ") {
+    last--;
+  }
+
+  return split[last].length;
+};
+
+//O(n) -- goes through string once and could potentially go through split array once
