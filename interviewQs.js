@@ -317,8 +317,9 @@ var isSubsequence = function (s, t) {
 
   return false;
 };
+
 /************************************** */
-// /**        Ransom Note            */
+// /**        Ransom Note            */ ---- Reviewed Feb. 12, 2025 and got the same thing basically
 /************************************** */
 
 var canConstruct = function (ransomNote, magazine) {
@@ -343,6 +344,28 @@ var canConstruct = function (ransomNote, magazine) {
       hash[char]--;
     } else {
       return false;
+    }
+  }
+
+  return true;
+};
+
+/************************************** */
+// /**        Isomorphic String   */ -----> Feb. 12, 2025
+/************************************** */
+var isIsomorphic = function (s, t) {
+  let map1 = {};
+  let map2 = {};
+
+  for (let i = 0; i < s.length; i++) {
+    let c1 = s[i];
+    let c2 = t[i];
+
+    if ((c1 in map1 && map1[c1] != c2) || (c2 in map2 && map2[c2] != c1)) {
+      return false;
+    } else {
+      map1[c1] = c2;
+      map2[c2] = c1;
     }
   }
 
