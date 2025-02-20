@@ -375,6 +375,37 @@ var isIsomorphic = function (s, t) {
 //O(n + m) - because we go through every element in each list once
 
 /************************************** */
+// /**       Word Pattern           */ -----> did Feb. 20, 2025
+/************************************** */
+/**NOTES: One of the tests includes "constructor" as a string, which fucks up setting map 1 to {} and not using the methods available through new Map(), which does not include "constructor" as a prototype property (has none)
+So, remember:
+map1.has(x) - instead of "x in map1"
+map1.get(x) - to check for != or ===
+map.set(x,y) - to set key x to val y
+*/
+
+var wordPattern = function (pattern, s) {
+  s = s.split(" ");
+  if (s.length !== pattern.length) return false;
+
+  let map1 = new Map();
+  let map2 = new Map();
+
+  for (let i = 0; i < pattern.length; i++) {
+    let x = pattern.charAt(i);
+    let y = s[i];
+
+    if (map1.has(x) && map1.get(x) !== y) return false;
+    if (map2.has(y) && map2.get(y) !== x) return false;
+
+    map1.set(x, y);
+    map2.set(y, x);
+  }
+
+  return true;
+};
+
+/************************************** */
 // /**        Merge Two Sorted Lists            */ -----> did July 29, do again soooooon
 /************************************** */
 /**
