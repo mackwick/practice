@@ -406,6 +406,33 @@ var wordPattern = function (pattern, s) {
 };
 
 /************************************** */
+// /**        Valid Anagram            */ ---------------- Feb. 25, 2025
+/************************************** */
+//easy but need to keep reviewing Map methods
+
+var isAnagram = function (s, t) {
+  if (s.length != t.length) return false;
+  let map = new Map();
+
+  for (let i = 0; i < s.length; i++) {
+    if (map.has(s[i])) {
+      map.set(s[i], map.get(s[i]) + 1);
+    } else {
+      map.set(s[i], 1);
+    }
+  }
+
+  for (let j = 0; j < t.length; j++) {
+    if (map.has(t[j]) && map.get(t[j]) > 0) {
+      map.set(t[j], map.get(t[j]) - 1);
+    } else {
+      return false;
+    }
+  }
+
+  return true;
+};
+/************************************** */
 // /**        Merge Two Sorted Lists            */ -----> did July 29, do again soooooon
 /************************************** */
 /**
