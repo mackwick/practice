@@ -30,7 +30,7 @@ var merge = function (nums1, m, nums2, n) {
 };
 
 //******************************** */
-//**           TWO SUM             */ <------------------- Reviewed Jan. 13, 2025
+//**           TWO SUM             */ <------------------- Reviewed Feb. 27, 2025
 //******************************** */
 
 //naive, brute force: loop through all of them until there is a match - O(n^2)
@@ -38,6 +38,20 @@ var merge = function (nums1, m, nums2, n) {
 
 //1. map the value: index (CHECK AS YOU GO for the target - element and THEN add it to the map)
 //2. return the indices
+
+var twoSum = function (nums, target) {
+  let hash = new Map();
+
+  for (let i = 0; i < nums.length; i++) {
+    let match = target - nums[i];
+
+    if (hash.has(match)) {
+      return [i, hash.get(match)];
+    } else {
+      hash.set(nums[i], i);
+    }
+  }
+};
 
 //example to try: ([2,7,11,15], 9) -- expected: [0,1]
 
@@ -432,6 +446,28 @@ var isAnagram = function (s, t) {
 
   return true;
 };
+
+//******************************** */
+//**           Contains Duplicate   II        */ <------------------- Reviewed Feb. 27, 2025
+//******************************** */
+var containsNearbyDuplicate = function (nums, k) {
+  let map = new Map();
+
+  for (let i = 0; i < nums.length; i++) {
+    if (map.has(nums[i])) {
+      if (Math.abs(map.get(nums[i]) - i) <= k) {
+        return true;
+      } else {
+        map.set(nums[i], i);
+      }
+    } else {
+      map.set(nums[i], i);
+    }
+  }
+
+  return false;
+};
+
 /************************************** */
 // /**        Merge Two Sorted Lists            */ -----> did July 29, do again soooooon
 /************************************** */
