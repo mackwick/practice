@@ -1,7 +1,7 @@
 //TO REVIEW AGAIN SOON
 
 /************************************** */
-// /**        MERGE SORTED ARRAY           *//REVIEWED: Jan. 13, 2025
+// /**        MERGE SORTED ARRAY           *//REVIEWED: March 6, 2025
 /************************************** */
 //set variable for final element in nums1
 //decrease m and n by 1 to get the indices
@@ -30,7 +30,7 @@ var merge = function (nums1, m, nums2, n) {
 };
 
 //******************************** */
-//**           TWO SUM             */ <------------------- Reviewed Feb. 27, 2025
+//**           TWO SUM             */ <------------------- Reviewed March 6, 2025
 //******************************** */
 
 //naive, brute force: loop through all of them until there is a match - O(n^2)
@@ -89,7 +89,7 @@ var twoSum = function (nums, target) {
 // };
 
 //******************************** */
-//**      PALINDROME NUMBER        */ <------------------- Reviewed Jan. 20, 2025
+//**      PALINDROME NUMBER        */ <------------------- Reviewed March 6, 2025
 //******************************** */
 //Naive/easy - convert to string and use pointers OR split/reverse/join
 //better -
