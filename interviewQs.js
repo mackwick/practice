@@ -199,7 +199,7 @@ var maxProfit = function (prices) {
 //O(n) ---> just going through the whole thing once
 
 /************************************** */
-// /**        Length of last word   */// REVIEWED Jan. 30, 2025
+// /**        Length of last word   */// REVIEWED March 10, 2025
 /************************************** */
 
 var lengthOfLastWord = function (s) {
@@ -240,7 +240,7 @@ var lengthOfLastWord = function (s) {
 //REV NEXT
 
 //******************************** */
-//**      LONGEST COMMON PREFIX         */<------------------- Reviewed Feb. 11, 2025
+//**      LONGEST COMMON PREFIX         */<------------------- Reviewed March 10, 2025
 //******************************** */
 var longestCommonPrefix = function (strs) {
   let prefix = "";
@@ -272,7 +272,7 @@ var longestCommonPrefix = function (strs) {
 };
 
 /************************************** */
-// /**  Find the Index of the first occurance in a string*/ -----> did Feb. 11, 2025
+// /**  Find the Index of the first occurance in a string*/ -----> Reviewed March 10, 2025
 /************************************** */
 
 var strStr = function (haystack, needle) {
@@ -280,7 +280,7 @@ var strStr = function (haystack, needle) {
 };
 
 /************************************** */
-// /**        Valid Palindrome            */ ---------------- Feb. 11, 2025
+// /**        Valid Palindrome            */ ---------------- March 10, 2025
 /************************************** */
 
 var isPalindrome = function (s) {
@@ -307,7 +307,7 @@ var isPalindrome = function (s) {
 // g → This is the global flag, which means replace all matches (not just the first one).
 
 /************************************** */
-// /**        Is Subsequence            */ ---------------- Feb. 11, 2025
+// /**        Is Subsequence            */ ---------------- Reviewed March 10, 2025
 /************************************** */
 //use the first example to draw it out if you get stuck. It's not as hard as you're making it.
 
@@ -333,7 +333,7 @@ var isSubsequence = function (s, t) {
 };
 
 /************************************** */
-// /**        Ransom Note            */ ---- Reviewed Feb. 12, 2025 and got the same thing basically
+// /**        Ransom Note            */ ---- Reviewed March 10, 2025
 /************************************** */
 
 var canConstruct = function (ransomNote, magazine) {
@@ -358,6 +358,32 @@ var canConstruct = function (ransomNote, magazine) {
       hash[char]--;
     } else {
       return false;
+    }
+  }
+
+  return true;
+};
+
+//WRITTEN DIFFERENTLY
+
+var canConstruct = function (ransomNote, magazine) {
+  if (ransomNote.length > magazine.length) return false;
+
+  let map = new Map();
+
+  for (let i = 0; i < magazine.length; i++) {
+    if (map.has(magazine[i])) {
+      map.set(magazine[i], map.get(magazine[i]) + 1);
+    } else {
+      map.set(magazine[i], 1);
+    }
+  }
+
+  for (let j = 0; j < ransomNote.length; j++) {
+    if (!map.has(ransomNote[j]) || map.get(ransomNote[j]) === 0) {
+      return false;
+    } else {
+      map.set(ransomNote[j], map.get(ransomNote[j]) - 1);
     }
   }
 
